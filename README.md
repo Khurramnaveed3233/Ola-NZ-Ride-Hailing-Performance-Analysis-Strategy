@@ -128,6 +128,6 @@ By combining **SQL analysis**, **dashboard storytelling**, and **strategic recom
 ---
 
 **Author**: Khurram Naveed – Data Analyst & Storyteller  
-📧 khurramnaveed4545@gmail.com | 🔗 [LinkedIn](#) | 📂 [Portfolio](#)
+khurramnaveed4545@gmail.com | +923407209828
 
 
