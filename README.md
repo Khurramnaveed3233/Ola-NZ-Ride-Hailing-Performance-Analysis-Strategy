@@ -1,133 +1,116 @@
 #  Ola NZ – Ride‑Hailing Performance Analysis & Strategy
 
-##  Project Overview
+![ola cover image](https://github.com/user-attachments/assets/11df63f6-5cc3-47a0-8d2e-f9df205d583f)
 
-This project analyzes **Ola’s New Zealand ride‑hailing operations** to uncover inefficiencies, revenue leaks, and customer experience gaps.  
-Using **advanced SQL** (Joins, CTEs, Window Functions, Stored Procedures) and a **Power BI dashboard**, I answered 14 targeted business questions, built a **star‑schema data model**, and delivered **data‑driven strategies** to improve utilization, retention, and profitability.
+
+#  Ola New Zealand – Ride-Hailing Performance Analytics & Growth Strategy
+
+##  Project Summary
+This project delivers an end-to-end **data analytics and business strategy assessment** of **Ola’s ride-hailing operations in New Zealand**.  
+Using **advanced SQL** and an **interactive Power BI dashboard**, the analysis uncovers **operational inefficiencies, revenue leakages, and customer experience gaps**, and translates them into **actionable, data-driven recommendations** aimed at improving profitability, utilization, and retention.
 
 ---
 
-## Business Problem
+##  Business Objectives
+Ola NZ was facing multiple operational challenges:
 
-Ola NZ faced:
-- High cancellations in **Wellington** and **Hamilton**
+- High ride cancellations in **Wellington** and **Hamilton**
 - Uneven driver utilization across cities
-- Revenue stagnation despite promotions
-- Inconsistent customer ratings
+- Revenue stagnation despite frequent promotions
+- Inconsistent customer ratings and loyalty
 
-**Objectives:**
-1. Reduce cancellations
-2. Optimize driver allocation
-3. Unlock revenue growth
-4. Improve retention and loyalty
-
----
-
-## 🗄 Dataset & Model
-
-**Star Schema Design**
-- **Fact Tables**: `fact_bookings`, `fact_ratings`
-- **Dimension Tables**: `dim_customers`, `dim_drivers`, `dim_locations`, `dim_payments`
-
-**Data Sources**: HRIS-style ride data, driver profiles, customer feedback, payment methods, location metadata.
+**Key Objectives**
+- Reduce ride cancellations and idle driver time  
+- Optimize driver allocation across high-demand zones  
+- Increase revenue per ride  
+- Improve customer satisfaction and retention  
 
 ---
 
-## Key Insights & Findings
+##  Data Model & Architecture
+Designed a **star-schema data model** optimized for analytical reporting and dashboard performance.
 
-### 1. Revenue Distribution
+### **Fact Tables**
+- `fact_bookings` – ride volume, fares, cancellations, trip duration  
+- `fact_ratings` – customer feedback and satisfaction scores  
 
-- **Auckland** generates the highest revenue but is nearing market saturation.
-- **Christchurch** underperforms despite higher marketing spend.
+### **Dimension Tables**
+- `dim_customers`
+- `dim_drivers`
+- `dim_locations`
+- `dim_payments`
 
-### 2. Cancellations
-
-- **Wellington**’s cancellation rate (~18%) is nearly double Auckland’s, driven by long wait times and low driver density.
-- **Hamilton** shows extreme idle time for drivers.
-
-### 3. Demand Patterns
-
-- Peak demand: **7–9 AM** and **5–7 PM**.
-- These slots also have the highest cancellations and surge pricing complaints.
-
-### 4. Driver Performance
-
-- Top 10% of drivers earn **3× more** than average, due to better ratings and strategic location choices.
-- A small subset of drivers consistently records higher cancellations.
-
-### 5. Vehicle Profitability
-
-- **Electric Vehicles (EVs)** have the highest fare per km, making them the most profitable.
-
-### 6. Customer Loyalty
-
-- **Gold-tier** customers ride most frequently — key segment for retention campaigns.
-
-### 7. Revenue Mix
-
-- Over 50% of trips are short rides but contribute less than 25% of revenue — imbalance in fare structure.
-
-### 8. Pricing & Retention
-
-- Long trips in Wellington are underpriced compared to Auckland, reducing driver earnings.
-- Christchurch’s heavy promo usage does not translate into repeat customers.
+**Data Coverage**
+- Ride transactions, driver profiles, customer behavior, ratings, payment methods, and location metadata.
 
 ---
 
-## Business Impact
+##  Key Insights & Findings
 
-If Ola NZ:
+### **Revenue & Market Performance**
+- **Auckland** generates the highest revenue but shows signs of market saturation.
+- **Christchurch** underperforms despite higher marketing spend, indicating inefficient budget allocation.
 
-- Reduces Life Sciences–like high attrition (cancellations) from **39% → 15%**
-- Increases female representation in R&D‑style analogy (loyalty tier focus) from **6% → 15%**
-- Improves bottom‑quartile satisfaction from **3.5 → 4.0**
+### **Cancellations & Utilization**
+- **Wellington** records ~18% cancellation rate, nearly double that of Auckland, driven by long wait times and low driver density.
+- **Hamilton** exhibits high driver idle time, highlighting poor supply-demand matching.
 
-**Projected Annual Impact**:
-- **NZ$3.1M** in additional revenue
-- Higher driver earnings
+### **Demand Patterns**
+- Peak demand occurs during **7–9 AM** and **5–7 PM**.
+- These peak windows also experience the highest cancellation rates and pricing complaints.
+
+### **Driver Performance**
+- Top 10% of drivers earn **3× more** than the average driver due to better ratings and strategic location selection.
+- A small subset of drivers consistently contributes to higher cancellation rates.
+
+### **Vehicle & Pricing Insights**
+- **Electric Vehicles (EVs)** generate the highest fare per kilometer, making them the most profitable vehicle type.
+- Long-distance rides in Wellington are underpriced compared to Auckland, negatively impacting driver earnings.
+
+### **Customer Loyalty & Revenue Mix**
+- **Gold-tier customers** account for the highest ride frequency and represent the most valuable retention segment.
+- Over **50% of trips** are short rides but contribute **less than 25% of total revenue**, indicating fare structure imbalance.
+
+---
+
+##  Business Impact (Projected)
+If Ola NZ implements the recommended strategies:
+
+- Reduce cancellations from **~39% to 15%**
+- Improve customer satisfaction scores from **3.5 to 4.0**
+- Optimize driver utilization in underperforming cities
+
+**Estimated Annual Impact**
+- **NZD 3.1M+ incremental revenue**
+- Higher driver earnings and engagement
 - Improved customer retention
-- Stronger market position
+- Stronger competitive position in the NZ market
 
 ---
 
-##  Recommendations
-
-| Area                  | Action                                                                 |
-|-----------------------|------------------------------------------------------------------------|
-| **Driver Allocation** | Reallocate idle drivers to high‑demand zones, focus on transport hubs  |
-| **Revenue Strategy**  | Adjust fares, bundle short trips, redesign promotions                  |
-| **Customer Experience** | Retrain drivers in Hamilton, moderate surge pricing                   |
-| **Retention**         | Launch loyalty rewards, city‑specific campaigns                        |
-| **Marketing Spend**   | Reduce in low‑yield suburbs, invest in Christchurch growth             |
-| **Data Quality**      | Fix logging errors, implement anomaly detection in ETL                 |
-
----
-
-## Dashboard Features
-- **Interactive Filters**: City, driver, vehicle type, loyalty tier
-- **Drill‑through Pages**: Cancellations, revenue by route, driver performance
-- **KPI Cards**: Revenue, cancellations, ratings, utilization
-- **Visuals**: Bar charts, pie charts, line graphs, correlation plots
-- **Executive Snapshot**: Quantified business impact & savings potential
+##  Dashboard Highlights
+- Interactive filters by **city, driver, vehicle type, and loyalty tier**
+- Drill-through analysis for **cancellations, revenue by route, and driver performance**
+- KPI cards for **revenue, cancellations, utilization, and ratings**
+- Executive summary page quantifying **financial impact and optimization opportunities**
 
 ---
 
 ##  Tools & Skills Used
-- **SQL**: Joins, CTEs, Window Functions, Stored Procedures
-- **Power BI**: Data modeling, DAX measures, interactive dashboards
-- **Power Query**: ETL, data cleaning, transformation
-- **Excel**: PivotTables, advanced charting
-- **Data Storytelling**: Executive summaries, business case framing
+- **SQL:** Joins, CTEs, Window Functions, Stored Procedures  
+- **Power BI:** Data modeling, DAX measures, interactive dashboards  
+- **Power Query:** ETL, data cleaning, transformation  
+- **Excel:** PivotTables, advanced reporting  
+- **Data Storytelling:** Business-focused insights and executive summaries  
 
 ---
 
-## Conclusion
-This project demonstrates how **data analytics + business thinking** can transform operational insights into measurable ROI.  
-By combining **SQL analysis**, **dashboard storytelling**, and **strategic recommendations**, Ola NZ can improve efficiency, loyalty, and profitability.
+##  Conclusion
+This project demonstrates how **advanced analytics combined with business thinking** can transform raw operational data into **measurable financial and strategic impact**.  
+By integrating **SQL-driven analysis**, **BI dashboards**, and **clear business recommendations**, the project showcases strong capabilities in **data analysis, stakeholder communication, and decision-support analytics**.
 
 ---
 
-**Author**: Khurram Naveed – Data Analyst & Storyteller  
-khurramnaveed4545@gmail.com | +923407209828
-
-
+**Author:** Khurram Naveed – Data Analyst  
+📧 khurramnaveed4545@gmail.com  
+📞 +92-340-720-9828
