@@ -2,9 +2,6 @@
 
 ![ola cover image](https://github.com/user-attachments/assets/11df63f6-5cc3-47a0-8d2e-f9df205d583f)
 
-
-#  Ola New Zealand – Ride-Hailing Performance Analytics & Growth Strategy
-
 ##  Project Summary
 This project delivers an end-to-end **data analytics and business strategy assessment** of **Ola’s ride-hailing operations in New Zealand**.  
 Using **advanced SQL** and an **interactive Power BI dashboard**, the analysis uncovers **operational inefficiencies, revenue leakages, and customer experience gaps**, and translates them into **actionable, data-driven recommendations** aimed at improving profitability, utilization, and retention.
