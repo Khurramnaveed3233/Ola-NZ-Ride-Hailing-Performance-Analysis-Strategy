@@ -1,5 +1,7 @@
 # 🚕 Ola NZ – Ride-Hailing Performance Analysis & Strategy
 
+![ola cover image (1)](https://github.com/user-attachments/assets/a7bfcc08-ba5a-4f6a-92b5-1bf9140d6e7d)
+
 > **Role:** Data Analyst | **Tools:** SQL Server · Power BI · DAX · Power Query | **Domain:** Transportation · Ride-Hailing Analytics
 
 ---
@@ -141,12 +143,6 @@ If Ola NZ implements the recommended strategies:
 ├── 🖼️  ola cover image.jpg         — Project cover
 └── 📄 README.md                   — Project documentation
 ```
-
----
-
-## 📸 Dashboard Preview
-
-![Ola NZ Dashboard](ola_sql.jpg)
 
 ---
 
